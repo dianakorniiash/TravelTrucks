@@ -1,6 +1,7 @@
-import { notFound } from "next/navigation";
+import { getTrackId } from "@/lib/api";
 import CamperClient from "./camperpage";
 import "./campers.css";
+
 
 export interface CamperData {
   id: string;
@@ -27,28 +28,24 @@ export interface CamperData {
   gas: boolean;
   water: boolean;
   gallery: { thumb: string; original: string }[];
-  reviews: {
-    reviewer_name: string;
-    reviewer_rating: number;
-    comment: string;
-  }[];
+  reviews: { reviewer_name: string; reviewer_rating: number; comment: string }[];
 }
 
 interface CampersProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
+
+
 export default async function Campers({ params }: CampersProps) {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/campers/${params.id}`,
-    { cache: "no-store" }
+  const { id } = await params;
+  const response = await getTrackId(id);
+  const data: CamperData = response.data;
+  console.log(data)
+
+  return (
+    <>
+    <CamperClient data={data}/>
+    </>
   );
-
-  if (!res.ok) {
-    notFound();
-  }
-
-  const data: CamperData = await res.json();
-
-  return <CamperClient data={data} />;
 }

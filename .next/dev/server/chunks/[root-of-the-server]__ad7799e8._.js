@@ -138,7 +138,6 @@ async function GET(req) {
         const params = new URL(req.url).searchParams;
         const page = params.get("page") || "1";
         const limit = params.get("limit") || "4";
-        // Собираем все фильтры кроме page и limit
         const filters = {};
         params.forEach((value, key)=>{
             if (key !== "page" && key !== "limit") filters[key] = value;
