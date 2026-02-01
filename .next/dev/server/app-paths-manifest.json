@@ -1,0 +1,6 @@
+{
+  "/api/campers/route": "app/api/campers/route.js",
+  "/campers/[id]/page": "app/campers/[id]/page.js",
+  "/catalog/page": "app/catalog/page.js",
+  "/page": "app/page.js"
+}

@@ -1,0 +1,328 @@
+/* [project]/app/campers/[id]/campers.css [app-client] (css) */
+.campersmain {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.contsainer-camper {
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 48px 64px;
+  display: flex;
+}
+
+.meta {
+  color: gray;
+  gap: 16px;
+  margin: 8px 0 16px;
+  display: flex;
+}
+
+.name {
+  font-family: inter;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.raiting-info {
+  color: #101828;
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.price {
+  margin-top: 16px;
+  font-family: inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.info-block {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.img-dataile {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 292px;
+  height: 312px;
+}
+
+.gallery {
+  gap: 48px;
+  display: flex;
+}
+
+.FR {
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  font-family: inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Active {
+  cursor: pointer;
+  border-bottom: 5px solid #e44848;
+}
+
+.container-fr {
+  gap: 40px;
+  display: flex;
+}
+
+.line {
+  background-color: #dadde1;
+  width: 100%;
+  height: 1px;
+  margin-top: -26.5px;
+}
+
+.tabs {
+  gap: 44px;
+  display: flex;
+  position: relative;
+}
+
+.tab-content {
+  gap: 40px;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+}
+
+.tab {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding-bottom: 24px;
+  font-family: inter;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+
+.tab.active:after {
+  content: "";
+  background-color: #e44848;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.raiting-star {
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+
+.tabs-line {
+  background-color: #dadde1;
+  width: 100%;
+  height: 1px;
+  margin-top: -2.5px;
+}
+
+.tags {
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.tags span {
+  background: #f2f4f7;
+  border-radius: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+}
+
+.features {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+  padding: 42px 52px;
+  display: flex;
+}
+
+.reviews-list {
+  flex-direction: column;
+  gap: 44px;
+  width: 100%;
+  display: flex;
+}
+
+.contact-us {
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 641px;
+  padding: 44px 57px;
+  display: flex;
+}
+
+.character {
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.block-character {
+  justify-content: space-between;
+  display: flex;
+}
+
+.character {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.line {
+  background-color: #dadde1;
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+}
+
+.titlle {
+  font-family: inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.top-cooment {
+  gap: 16px;
+  display: flex;
+}
+
+.iconname {
+  color: #e44848;
+  background-color: #f2f4f7;
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-family: inter;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+}
+
+.nameComentator {
+  font-family: inter;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.con-n-r {
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  display: flex;
+}
+
+.container-coment {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.comment {
+  color: #475467;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.raiting {
+  gap: 4px;
+  display: flex;
+}
+
+.iconcategory {
+  display: block;
+}
+
+.TitleUs {
+  margin-bottom: 8px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-contact {
+  color: #fff;
+  background-color: #e44848;
+  border: none;
+  border-radius: 200px;
+  width: 166px;
+  margin: 0 auto;
+  padding: 18px 63px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.btn-contact:hover {
+  background-color: #d74444;
+}
+
+.ContainerForm {
+  flex-direction: column;
+  gap: 14px;
+  display: flex;
+}
+
+.InputInfoC {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.InputDopInfo {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 12px;
+  min-height: 118px;
+  padding: 18px;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.error {
+  color: #e44848;
+  margin-top: -8px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=app_campers_%5Bid%5D_campers_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/dianakorniiash/Desktop/Prjcts/TravelTrucks/app/page.tsx"],"sourcesContent":["\nimport { Metadata } from \"next\";\nimport Link from \"next/link\";\nimport \"./home.css\";\n\n\nexport const metadata: Metadata = {\n  title: \"Camper Catalog | Camper Rental\",\n  description: \"Browse all campervans available for booking.\",\n};\nexport default function Home() {\n\n\n\n  return (\n    <>\n      <div className=\"HomePage\">\n\n        <div className=\"infohome\">\n          <div>\n            <h1 className=\"homeTexth1\">Campers of your dreams</h1>\n            <h2 className=\"homeTexth2\">You can find everything you want in our catalog</h2>\n          </div>\n           <div>\n              <Link href=\"/catalog\"><button className=\"button-go-catalog\">View Now</button></Link>\n            </div>\n        </div>\n\n\n      </div>\n    </>\n  )\n}\n"],"names":[],"mappings":";;;;;;;AAEA;;;;AAIO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AACe,SAAS;IAItB,qBACE;kBACE,cAAA,8OAAC;YAAI,WAAU;sBAEb,cAAA,8OAAC;gBAAI,WAAU;;kCACb,8OAAC;;0CACC,8OAAC;gCAAG,WAAU;0CAAa;;;;;;0CAC3B,8OAAC;gCAAG,WAAU;0CAAa;;;;;;;;;;;;kCAE5B,8OAAC;kCACE,cAAA,8OAAC,0LAAI;4BAAC,MAAK;sCAAW,cAAA,8OAAC;gCAAO,WAAU;0CAAoB;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQ1E"}}]
+}

@@ -1,0 +1,45 @@
+.HomePage {
+    height: 92vh;
+    width: 100%;
+    background-image: url("../public/Picture.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 64px;
+    display: flex;
+    align-items: center;
+}
+.homeTexth1 {
+    font-weight: 600;
+    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    color: rgba(247, 247, 247, 1);
+}
+
+.homeTexth2 {
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    color: rgba(247, 247, 247, 1);
+}
+.button-go-catalog {
+    font-family: 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 16px;
+    font-style: medium;
+    background-color: rgba(228, 72, 72, 1);
+    border-radius: 200px;
+    padding: 16px 48.5px;
+    border: none;
+    transform: 0.4s;
+}
+.button-go-catalog:hover {
+    background-color: rgba(216, 67, 67, 1);
+    cursor: pointer;
+}
+.infohome {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

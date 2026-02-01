@@ -1,0 +1,15 @@
+/* [project]/app/catalog/catalog.css [app-client] (css) */
+.List-truck {
+  justify-content: center;
+  gap: 64px;
+  max-width: 1440px;
+  padding: 48px 0;
+  display: flex;
+}
+
+.container-list {
+  justify-content: center;
+  display: flex;
+}
+
+/*# sourceMappingURL=app_catalog_catalog_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,13 @@
+.List-truck {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1440px;
+  gap: 64px;
+  padding: 48px 0px;
+}
+.container-list {
+  display: flex;
+  justify-content: center;
+}
+

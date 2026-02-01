@@ -1,0 +1,36 @@
+.Header {
+    padding: 24px 64px;
+    background-color: rgba(247, 247, 247, 1);
+    display: flex;
+    position: relative;
+}
+.header-list {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.text-list-header {
+    color: rgba(16, 24, 40, 1);
+    font-style: medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+.text-list-header:hover {
+    color: rgba(216, 67, 67, 1);
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.active {
+    color: rgba(216, 67, 67, 1);
+}
+

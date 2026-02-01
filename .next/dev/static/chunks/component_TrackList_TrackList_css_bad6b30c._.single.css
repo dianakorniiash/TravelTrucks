@@ -1,0 +1,198 @@
+/* [project]/component/TrackList/TrackList.css [app-client] (css) */
+.list {
+  flex-direction: column;
+  gap: 32px;
+  width: 888px;
+  max-width: 888px;
+  display: flex;
+}
+
+.card {
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  gap: 24px;
+  padding: 24px;
+  display: flex;
+}
+
+.image img {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 320px;
+}
+
+.content {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.container-price {
+  flex-direction: column;
+  display: flex;
+}
+
+.top {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.price {
+  font-family: inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.meta {
+  color: gray;
+  gap: 16px;
+  margin: 8px 0 0;
+  display: flex;
+}
+
+.desc {
+  color: #777;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.tags {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.tags span {
+  background: #f2f4f7;
+  border-radius: 100px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+}
+
+.btn {
+  color: #fff;
+  width: 170px;
+  font-family: inter, sans-serif;
+  font-style: medium;
+  letter-spacing: -0.5%;
+  background: #e44848;
+  border: none;
+  border-radius: 200px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #c43434;
+}
+
+.btnmore {
+  color: #101828;
+  background-color: #fff;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  width: 150px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  font-family: inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btnmore:hover {
+  cursor: pointer;
+  border: 1px solid #d84343;
+}
+
+.raiting-star {
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+
+.loader {
+  background-image: linear-gradient(#d84343, #b54a4a), linear-gradient(#29b6f6, #4fc3f7), linear-gradient(#29b6f6, #4fc3f7);
+  background-position: 0 0, 80px 20px, 100px 40px;
+  background-repeat: no-repeat;
+  background-size: 80px 70px, 30px 50px, 30px 30px;
+  width: 130px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.loader:after {
+  content: "";
+  box-sizing: content-box;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: .75s ease-in infinite alternate wheelSk;
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  box-shadow: 78px 0 0 -10px #fff, 78px 0 #000;
+}
+
+.loader:before {
+  content: "";
+  background-image: linear-gradient(#fff 45px, #0000 0), linear-gradient(#fff 45px, #0000 0), linear-gradient(#fff 45px, #0000 0);
+  background-position: 0 11px, 8px 35px, 0 60px;
+  background-repeat: no-repeat;
+  background-size: 30px 4px;
+  width: 70px;
+  height: 70px;
+  animation: .75s linear infinite lineDropping;
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+@keyframes wheelSk {
+  0%, 50%, 100% {
+    transform: translateY(0);
+  }
+
+  30%, 90% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes lineDropping {
+  0% {
+    opacity: 1;
+    background-position: 100px 11px, 115px 35px, 105px 60px;
+  }
+
+  50% {
+    background-position: 0 11px, 20px 35px, 5px 60px;
+  }
+
+  60% {
+    background-position: -30px 11px, 0 35px, -10px 60px;
+  }
+
+  75%, 100% {
+    opacity: 0;
+    background-position: -30px 11px, -30px 35px, -30px 60px;
+  }
+}
+
+/*# sourceMappingURL=component_TrackList_TrackList_css_bad6b30c._.single.css.map*/
