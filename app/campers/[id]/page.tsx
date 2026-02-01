@@ -1,4 +1,3 @@
-import { getTrackId } from "@/lib/api";
 import CamperClient from "./camperpage";
 import "./campers.css";
 
@@ -39,10 +38,16 @@ interface CampersProps {
 }
 
 export default async function Campers({ params }: CampersProps) {
-  const { id } = params;
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/campers/${params.id}`,
+    { cache: "no-store" }
+  );
 
-  const response = await getTrackId(id);
-  const data: CamperData = response.data;
+  if (!res.ok) {
+    throw new Error("Failed to fetch camper data");
+  }
+
+  const data: CamperData = await res.json();
 
   return <CamperClient data={data} />;
 }
