@@ -44,22 +44,34 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/server.js [app-route] (ecmascript)");
 ;
-const BASE_URL = "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io";
+const BASE_URL = ("TURBOPACK compile-time value", "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io");
 async function GET(req) {
     try {
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
         const { searchParams } = new URL(req.url);
-        const res = await fetch(`${BASE_URL}/campers?${searchParams.toString()}`, {
+        const url = `${BASE_URL}/campers?${searchParams.toString()}`;
+        const res = await fetch(url, {
+            headers: {
+                "Content-Type": "application/json"
+            },
             cache: "no-store"
         });
         if (!res.ok) {
-            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json([], {
+            const text = await res.text();
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: "Backend error",
+                details: text
+            }, {
                 status: res.status
             });
         }
         const data = await res.json();
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json(data);
-    } catch  {
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json([], {
+    } catch (error) {
+        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+            error: "Internal server error"
+        }, {
             status: 500
         });
     }

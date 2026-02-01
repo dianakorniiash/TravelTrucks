@@ -1,31 +1,39 @@
-// app/api/campers/route.ts
-import axios from "axios";
 import { NextResponse } from "next/server";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 export async function GET(req: Request) {
   try {
-    const url = `${baseUrl}/campers`;
+    if (!BASE_URL) {
+      return NextResponse.json(
+        { error: "BASE_URL is not defined" },
+        { status: 500 }
+      );
+    }
 
-    const params = new URL(req.url).searchParams;
-    const page = params.get("page") || "1";
-    const limit = params.get("limit") || "4";
+    const { searchParams } = new URL(req.url);
 
-    // Собираем все фильтры кроме page и limit
-    const filters: Record<string, string> = {};
-    params.forEach((value, key) => {
-      if (key !== "page" && key !== "limit") filters[key] = value;
+    const url = `${BASE_URL}/campers?${searchParams.toString()}`;
+
+    const res = await fetch(url, {
+      headers: { "Content-Type": "application/json" },
+      cache: "no-store",
     });
 
-    const response = await axios.get(url, {
-      params: { page, limit, ...filters },
-      headers: {'content-type':'application/json'}
-    });
+    if (!res.ok) {
+      const text = await res.text();
+      return NextResponse.json(
+        { error: "Backend error", details: text },
+        { status: res.status }
+      );
+    }
 
-    return NextResponse.json(response.data);
-  } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : "Unknown error";
-    return NextResponse.json({ error: message }, { status: 500 });
+    const data = await res.json();
+    return NextResponse.json(data);
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
   }
 }
