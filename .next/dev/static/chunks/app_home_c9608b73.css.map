@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/dianakorniiash/Desktop/Prjcts/TravelTrucks/app/home.css"],"sourcesContent":[".HomePage {\n    height: 92vh;\n    width: 100%;\n    background-image: url(\"../public/Picture.png\");\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n    padding: 0 64px;\n    display: flex;\n    align-items: center;\n}\n.homeTexth1 {\n    font-weight: 600;\n    font-size: 48px;\n    font-family: 'Inter', sans-serif;\n    color: rgba(247, 247, 247, 1);\n}\n\n.homeTexth2 {\n    font-weight: 600;\n    font-size: 24px;\n    font-family: 'Inter', sans-serif;\n    color: rgba(247, 247, 247, 1);\n}\n.button-go-catalog {\n    font-family: 'Inter', sans-serif;\n    color: rgba(255, 255, 255, 1);\n    font-weight: 500;\n    font-size: 16px;\n    font-style: medium;\n    background-color: rgba(228, 72, 72, 1);\n    border-radius: 200px;\n    padding: 16px 48.5px;\n    border: none;\n    transform: 0.4s;\n}\n.button-go-catalog:hover {\n    background-color: rgba(216, 67, 67, 1);\n    cursor: pointer;\n}\n.infohome {\n    display: flex;\n    flex-direction: column;\n    gap: 40px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;AAWA;;;;;;;AAOA;;;;;;;AAMA;;;;;;;;;;;;;AAYA;;;;;AAIA"}}]
-}
