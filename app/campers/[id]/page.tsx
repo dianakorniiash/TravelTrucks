@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import CamperClient from "./camperpage";
 import "./campers.css";
 
@@ -44,7 +45,7 @@ export default async function Campers({ params }: CampersProps) {
   );
 
   if (!res.ok) {
-    throw new Error("Failed to fetch camper data");
+    notFound();
   }
 
   const data: CamperData = await res.json();
